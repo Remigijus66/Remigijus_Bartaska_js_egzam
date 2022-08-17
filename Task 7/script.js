@@ -10,6 +10,13 @@ const audi = {
   year: 2005,
   color: "white",
 };
+/**
+ *  funkciją kaip argumentą priims objektą 
+ir grąžins visus jo "key" masyve.
+ * @param {*} object
+ * @returns {*} visu objekto "key" masyvas
+ *  
+ */
 
 function showObjectKeys(object) {
   const arr = [];
