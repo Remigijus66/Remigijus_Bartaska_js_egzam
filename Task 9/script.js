@@ -11,7 +11,12 @@ wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada 
 ------------------------------------------------------------------------------------------------------ */
 "use strict";
 console.log("script.js");
-
+/**
+ *
+ * @param {string} ttl
+ * @param {string} director
+ * @param {number} budget
+ */
 function Movie(ttl, director, budget) {
   this.title = ttl;
   this.director = director;
