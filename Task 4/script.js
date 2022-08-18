@@ -9,4 +9,51 @@ Pastaba: Sukurta kortelė, kurioje yra informacija apie automobilį (brand), tur
 turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
-const ENDPOINT = 'cars.json';
+"use strict";
+console.log("script.js");
+
+const endPoint = "cars.json";
+const destEl = document.getElementById("output");
+
+destEl.textContent = "";
+
+fetch(endPoint)
+  .then((resp) => resp.json())
+  .then((dataInJs) => {
+    createCardsList(dataInJs, destEl);
+    console.log("dataInJs ===", dataInJs);
+  })
+  .catch((err) => console.warn(err));
+
+/** creates single card
+ *
+ * @param {*} brnd string - name of brand
+ * @param {*} mdl array - names of models
+ * @returns
+ */
+function createCarsCard(brnd, mdl) {
+  const cardEl = document.createElement("div");
+  cardEl.className = "card";
+  const headerEl = document.createElement("h3");
+  headerEl.innerHTML = `Cars from <span> ${brnd} </span>`;
+  const carsEl = document.createElement("ul");
+  mdl.forEach((e) => {
+    const carEl = document.createElement("li");
+    carEl.textContent = e;
+    carsEl.append(carEl);
+  });
+  cardEl.append(headerEl, carsEl);
+  return cardEl;
+}
+/** makes list of cards in  HTML destination
+ *
+ * @param {*} arr array of data
+ * @param {*} dest target element to create a list in
+ */
+
+function createCardsList(arr, dest) {
+  arr.forEach((e) => {
+    const card = createCarsCard(e.brand, e.models);
+    dest.append(card);
+  });
+}
