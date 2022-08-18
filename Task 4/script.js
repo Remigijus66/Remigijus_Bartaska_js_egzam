@@ -12,12 +12,12 @@ turėti bent minimalų stilių ir būti responsive;
 "use strict";
 console.log("script.js");
 
-const endPoint = "cars.json";
+const ENDPOINT = "cars.json";
 const destEl = document.getElementById("output");
 
 destEl.textContent = "";
 
-fetch(endPoint)
+fetch(ENDPOINT)
   .then((resp) => resp.json())
   .then((dataInJs) => {
     createCardsList(dataInJs, destEl);
