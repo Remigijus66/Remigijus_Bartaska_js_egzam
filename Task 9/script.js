@@ -12,10 +12,10 @@ wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada 
 "use strict";
 
 class Movie {
-  constructor(ttl, director, budget) {
+  constructor(ttl, dir, budg) {
     this.title = ttl;
-    this.director = director;
-    this.budget = +budget;
+    this.director = dir;
+    this.budget = budg;
 
     this.wasExpensive = function () {
       if (this.budget > 100000000) {
