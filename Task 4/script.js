@@ -10,7 +10,6 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 "use strict";
-console.log("script.js");
 
 const ENDPOINT = "cars.json";
 const destEl = document.getElementById("output");
@@ -21,7 +20,6 @@ fetch(ENDPOINT)
   .then((resp) => resp.json())
   .then((dataInJs) => {
     createCardsList(dataInJs, destEl);
-    console.log("dataInJs ===", dataInJs);
   })
   .catch((err) => console.warn(err));
 

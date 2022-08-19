@@ -45,6 +45,8 @@
   list-style-type: "- ";
   line-height: 20px;
 }
+
+/* tablet */
 @media screen and (min-width: 769px) {
   #output {
     display: grid;
