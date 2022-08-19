@@ -8,7 +8,6 @@ atveju grąžins visų "users" amžiaus visurkį kaip skaičių.
 atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann Smith'..].
 -------------------------------------------------------------------------- */
 "use strict";
-console.log("script.js");
 
 const users = [
   { id: "1", name: "John Smith", age: 20 },
@@ -34,6 +33,7 @@ function getUserAverageAge(arr) {
   return average;
 }
 const vidurkis = getUserAverageAge(users);
+console.log("typeof vidurkis ===", typeof vidurkis);
 console.log("vidurkis.toFixed(2) ===", vidurkis.toFixed(2));
 
 /** Grazina masyva, visu masyvo elementu,kurie yra objektai, lauko  "Key=name" sarasa
