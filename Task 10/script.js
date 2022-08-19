@@ -2,7 +2,6 @@
 Sutvarkykite užduoties "Task 10" esančius failus taip, kad veiktų žemiau pateiktos funkcijos.
 -------------------------------------------------------------------------------------------- */
 "use strict";
-console.log("script.js");
 
 import { one, two, three, four, five } from "./modules/numbers/numbers.js";
 import composition from "./modules/math/composition.js";
