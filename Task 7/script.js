@@ -4,6 +4,8 @@ Turimas "audi" objektas.
 Parašykite funkciją "showObjectKeys", kuri kaip argumentą priims objektą 
 ir grąžins visus jo "key" masyve.
 -------------------------------------------------------------------------- */
+"use strict";
+
 const audi = {
   make: "audi",
   model: "A6",
@@ -11,7 +13,7 @@ const audi = {
   color: "white",
 };
 /**
- *  funkciją kaip argumentą priims objektą 
+ *  funkcija kaip argumentą priims objektą 
 ir grąžins visus jo "key" masyve.
  * @param {*} object
  * @returns {*} visu objekto "key" masyvas
